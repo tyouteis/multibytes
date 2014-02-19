@@ -1,2 +1,7 @@
 <h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% form_tag ({:action => 'show'}, 
+	{:class=>'register'}) do %>
+first name:<%= text_field_tag("first_name","", :class=>"User") %>
+last name:<%= text_field_tag("last_name","", :class=>"User") %>
+<%= submit_tag "Click" %>
+<% end %>

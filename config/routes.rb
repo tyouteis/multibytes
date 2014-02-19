@@ -1,5 +1,5 @@
 RailsApp::Application.routes.draw do
-  get "welcome/show"
+  post "welcome/show"
 
   get "welcome/index"
 

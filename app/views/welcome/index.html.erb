@@ -1,7 +1,16 @@
-<h1>Welcome#index</h1>
-<% form_tag ({:action => 'show'}, 
-	{:class=>'register'}) do %>
-first name:<%= text_field_tag("first_name","", :class=>"User") %>
-last name:<%= text_field_tag("last_name","", :class=>"User") %>
-<%= submit_tag "Click" %>
+<h1>Welcome!</h1>
+<%= form_for :post, :url=>{:action=>"show"} do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
